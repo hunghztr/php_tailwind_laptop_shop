@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.top-menu-item {
+    @apply py-1 hover:text-gray-800 relative after:lg:absolute after:lg:bottom-0 after:lg:left-0 after:lg:bg-slate-600 after:lg:h-0.5 after:lg:w-0 hover:after:lg:w-full after:lg:transition-all after:lg:ease-in-out after:lg:duration-300;
+}
+
+.top-menu-item-active {
+    @apply text-gray-800 relative after:lg:absolute after:lg:bottom-0 after:lg:left-0 after:lg:bg-slate-600 after:lg:h-0.5 after:lg:w-full;
+}
+
+.custom-icon {
+    @apply w-5 h-5 inline-block;
+}
+
+.top-menu-expanded {
+    @apply absolute top-10 z-50 w-full bg-white text-center shadow-md animate-slideDown;
+}
+
+.hover-text {
+    @apply hover:text-gray-500 cursor-pointer;
+}
