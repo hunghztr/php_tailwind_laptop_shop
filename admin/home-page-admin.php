@@ -5,10 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
+    <?php
+    session_start();
+
+
+    if (!isset($_SESSION['vai_tro']) || $_SESSION['vai_tro'] != 'ADMIN') {
+        echo "403 Access Denied, bạn không có quyền hạn để truy cập tài nguyên này!";
+        exit();
+    }
+    ?>
     <section class="flex min-h-screen bg-gray-100">
         <!-- Sidebar -->
         <aside class="w-1/4 bg-white shadow-lg">

@@ -5,51 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-    <header class="p-6 mx-auto z-50 fixed top-0 left-0 right-0 shadow-md bg-white">
-        <nav class="flex flex-row justify-between items-center relative">
-            <div class="text-center text-xl font-semibold logo basis-2/6 lg:basis-3/6 cursor-pointer">
-                Laptop Shop.
-            </div>
-            <ul id="top-menu"
-                class="basis-3/6 lg:basis-1/6 hidden lg:flex lg:items-center lg:justify-end lg:gap-8 uppercase text-sm text-gray-500 font-medium">
-                <li class="top-menu-item"><a href="#">Home</a></li>
-                <li class="top-menu-item"><a href="./product.html">Products</a></li>
-                <li class="top-menu-item"><a href="./about.html">About</a></li>
-                <li class="top-menu-item top-menu-item-active"><a href="./contact.html">Contact</a></li>
-            </ul>
-            <ul class="basis-3/6 ml-16 uppercase font-medium w-20 flex justify-end">
-                <li class="top-menu-item"><a href="./cart.html">
-                        <svg data-slot="icon" class="custom-icon" fill="none" stroke-width="1" stroke="currentColor"
-                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z">
-                            </path>
-                        </svg>
-                        <span>Cart</span>
-                    </a></li>
-                <li class="top-menu-item ml-3"><a href="./login.html">
-                        <svg class="custom-icon" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor"
-                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z">
-                            </path>
-                        </svg>
-                        <span>Login</span>
-                    </a></li>
-            </ul>
-            <div id="menu-button" class="lg:hidden basis-1/7 cursor-pointer flex justify-end ml-5">
-                <svg class="custom-icon" data-slot="icon" fill="none" stroke-width="2" stroke="currentColor"
-                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25">
-                    </path>
-                </svg>
-            </div>
-        </nav>
-    </header>
+    <?php include '../layout/header.php'; ?>
     <div class="main mt-20">
         <section class="bg-white py-12">
             <div class="max-w-6xl mx-auto px-4">
@@ -125,34 +85,7 @@
         </section>
 
     </div>
-    <footer>
-        <div class="flex justify-center gap-56 items-center p-20 bg-[#1a1a1a] text-white">
-            <div class="">
-                LIÊN HỆ
-                <div class="border-b"></div>
-                <p class="hover-text">số điện thoại: 0866159825</p>
-                <p class="hover-text">email: tientruonghung@gmail.com</p>
-
-            </div>
-            <div class="">
-                ĐỊA CHỈ
-                <div class="border-b"></div>
-                <p class="hover-text">cơ sở 1: Trường Đại Học Công Nghệ Đông Á, đường Trịnh Văn Bô, Nam Từ Liêm, Hà
-                    Nội</p>
-                <p class="hover-text">cơ sở 2: 80/21/40 Tu Hoàng, Xuân Phương, Phương Canh, Nam Từ Liêm, Hà Nội</p>
-            </div>
-            <div class="">
-                MẠNG XÃ HỘI
-                <div class="border-b"></div>
-                <p class="hover-text"><a href="https://web.facebook.com/tong.van.tien.980829">Facebook: Tien Truong
-                        Hung</a></p>
-                <p class="hover-text"><a href="">Zalo:Tien Truong Hung</a></p>
-            </div>
-        </div>
-        <div class="bg-[#1a1a1a] text-blue-500 p-2 hover-text"><a
-                href="https://web.facebook.com/tong.van.tien.980829">Bản
-                quyền thuộc về @tien truong hung</a></div>
-    </footer>
+    <?php include '../layout/footer.php'; ?>
 </body>
 
 </html>
