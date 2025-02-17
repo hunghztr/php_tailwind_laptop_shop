@@ -7,31 +7,14 @@
     <link rel="icon" href="../src/img/title/logo.png" type="image/gif" sizes="16x16">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .slide {
-            background-image: url('../img/slide/slide1.jpg');
-        }
-
-        .img1 {
-            background-image: url('../img/logo/asus.png');
-        }
-
-        .img2 {
-            background-image: url('../img/logo/dell.png');
-        }
-
-        .img3 {
-            background-image: url('../img/logo/macbook.png');
-        }
-    </style>
 </head>
 
 <body>
     <div id="root">
         <div class="content-wrapper max-w-screen-xl text-base mx-auto px-8">
-            <?php include '../layout/header.php'; ?>
+            <?php include '../../layout/client/header.php'; ?>
             <?php
-            require_once '../model/SanPham.php';
+            require_once '../../model/SanPham.php';
             $ten = '';
             $ten_anh = '';
             $mo_ta = '';
@@ -69,7 +52,7 @@
                         <!-- Hình Ảnh Sản Phẩm -->
                         <?php
                         echo "<div class='w-[500px]'>
-                                <img src='../img/product/$ten_anh' alt='Sản phẩm' class='w-full h-auto rounded-lg shadow-lg'>
+                                <img src='../../img/client/product/$ten_anh' alt='Sản phẩm' class='w-full h-auto rounded-lg shadow-lg'>
                             </div>
                            "; ?>
 
@@ -116,10 +99,9 @@
         </main>
     </div>
 
-    <?php include '../layout/footer.php'; ?>
+    <?php include '../../layout/client/footer.php'; ?>
     </div>
 
-    <script src="../main.js"></script>
 </body>
 
 </html>

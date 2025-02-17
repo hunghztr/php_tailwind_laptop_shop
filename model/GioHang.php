@@ -5,12 +5,7 @@ class GioHang
     private $tong_san_pham;
     private $id_nguoi_dung;
 
-    public function __construct($id, $tong_san_pham, $id_nguoi_dung)
-    {
-        $this->id = $id;
-        $this->tong_san_pham = $tong_san_pham;
-        $this->id_nguoi_dung = $id_nguoi_dung;
-    }
+    public function __construct() {}
 
     // Getter and Setter for id
     public function getId()

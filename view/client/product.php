@@ -10,10 +10,10 @@
 
 <body>
     <div class="root">
-        <?php include '../layout/header.php'; ?>
+        <?php include '../../layout/client/header.php'; ?>
         <div class="main flex mt-40 justify-between mx-24">
             <div class="filter">
-                <form action="../view/product.php" method="get">
+                <form action="../client/product.php" method="get">
                     <div class="p-4 w-96 bg-white rounded-2xl shadow-lg">
                         <h2 class="text-xl font-semibold mb-4">Bộ lọc sản phẩm</h2>
 
@@ -71,7 +71,8 @@
             </div>
             <div class="product grid grid-cols-3 gap-8 mb-10">
                 <?php
-                require_once '../model/SanPham.php';
+                require_once '../../model/SanPham.php';
+                require_once '../../model/CoSoDuLieu.php';
                 $sql = "select * from san_pham";
                 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                     if (
@@ -127,21 +128,13 @@
                         $sql = $sql . " where danh_muc = '$factory'";
                     }
                 }
-                $connect = mysqli_connect("localhost", "root", "141512", "laptop_shop");
-                if (!$connect) {
-                    die("Error in connection" . mysqli_connect_error());
-                    exit();
-                }
+                $db = new CoSoDuLieu();
 
-                $result = mysqli_query($connect, $sql);
+                $result = $db->query($sql);
                 $count = 0;
                 if (mysqli_num_rows($result) > 0) {
                     while ($row = mysqli_fetch_assoc($result)) {
-                        $sp = new SanPham();
-                        $sp->setId($row['id']);
-                        $sp->setTenAnh($row['ten_anh']);
-                        $sp->setTen($row['ten']);
-                        $sp->setGiaTien($row['gia_tien']);
+                        $sp = $db->selectSanPham($row);
                         $id = $sp->getId();
                         $ten_anh = $sp->getTenAnh();
                         $ten = $sp->getTen();
@@ -151,11 +144,12 @@
                         echo "<div
                         class='border border-gray-400 max-w-56 bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300'>
                         <img class='w-full h-48 object-cover transition-transform duration-300 hover:scale-110'
-                            src='../img/product/$ten_anh' alt='Laptop Image'>
+                            src='../../img/client/product/$ten_anh' alt='Laptop Image'>
                         <div class='p-4'>
                             <h3 class='text-xl font-semibold text-gray-800'><a href='./detail.php?id=$id'>$ten</a></h3>
                             <p class='text-red-500 font-bold text-lg mt-2'>$giaStr đ</p>
-                            <form action='../controller/addToCart.php' method = 'get'>
+                            <form action='../../controller/client/addToCart.php' method = 'get'>
+                            <input hidden value='$id' name='value'>
                             <button
                                 class='mt-4 w-full bg-blue-500 text-white py-2 rounded-xl hover:bg-blue-600 transition-colors duration-300'>
                                 Thêm vào giỏ hàng
@@ -169,10 +163,11 @@
                         }
                     }
                 }
+                $db->NgatKetNoi();
                 ?>
             </div>
         </div>
-        <?php include '../layout/footer.php'; ?>
+        <?php include '../../layout/client/footer.php'; ?>
     </div>
 
 </body>

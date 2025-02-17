@@ -9,5 +9,5 @@ session_unset();
 session_destroy();
 
 // Chuyển hướng về trang đăng nhập
-header("Location: ../view/login.php");
+header("Location: ../../view/client/login.php?value=Đăng xuất thành công");
 exit();

@@ -11,8 +11,8 @@
 <body>
     <?php
     $mess = "";
-    if (isset($_GET['error'])) {
-        $mess = $_GET['error'];
+    if (isset($_GET['value'])) {
+        $mess = $_GET['value'];
     }
     ?>
     <section class="flex items-center justify-center min-h-screen bg-gray-200">
@@ -21,7 +21,7 @@
             <h2 class="text-3xl font-bold text-gray-800 text-center mb-6">Đăng nhập</h2>
 
             <!-- Form đăng nhập -->
-            <form action="../controller/login.php" method="post">
+            <form action="../../controller/client/login.php" method="post">
                 <!-- Email -->
                 <div class="mb-4">
                     <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
@@ -37,7 +37,7 @@
                         class="w-full p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
                         placeholder="Nhập mật khẩu của bạn" required>
                 </div>
-                <div class="text-red-600 py-2"><?php echo "$mess" ?></div>
+                <div class="text-gray-600 py-2"><?php echo "$mess" ?></div>
 
                 <div class="text-right mb-4">
                     Bạn chưa có tài khoản?<a href="./register.php" class="text-blue-600 hover:underline">Đăng kí

@@ -22,7 +22,7 @@
                 <h2 class="text-3xl font-bold text-gray-800 text-center mb-6">Đăng ký</h2>
 
                 <!-- Form đăng ký -->
-                <form action="../controller/register.php" method="post">
+                <form action="../../controller/client/register.php" method="post">
 
                     <!-- Email -->
                     <div class="mb-4">

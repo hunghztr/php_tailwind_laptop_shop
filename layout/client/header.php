@@ -40,10 +40,10 @@ session_start();
                     if (isset($_SESSION['name'])) {
                         $name = $_SESSION['name'];
                         echo "<button id='dropBtn'>$name</button>
-         <div id='dropdownMenu' class='hidden group-hover:block w-96 absolute right-0 bg-white border rounded-md shadow-lg'>
+         <div id='dropdownMenu' class='hidden group-hover:block w-[200px] absolute right-0 bg-white border rounded-md shadow-lg'>
             <a href='order.php' class='w-full block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100'>Xem thông tin cá nhân</a>
              <a href='order.php' class='w-full block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100'>Xem đơn hàng</a>
-             <a href='../controller/logout.php' class='w-full block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100'>Đăng xuất</a>
+             <a href='../../controller/client/logout.php' class='w-full block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100'>Đăng xuất</a>
          </div>";
                     } else {
                         echo "<span>Login</span>";

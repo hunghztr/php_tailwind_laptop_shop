@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <?php include '../layout/header.php'; ?>
+    <?php include '../../layout/client/header.php'; ?>
     <div class="main mt-28">
         <section class="bg-gray-100 py-12">
             <div class="max-w-6xl mx-auto px-4">
@@ -82,7 +82,7 @@
             </div>
         </section>
     </div>
-    <?php include '../layout/footer.php'; ?>
+    <?php include '../../layout/client/footer.php'; ?>
 </body>
 
 </html>
