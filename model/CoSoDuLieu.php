@@ -26,6 +26,7 @@ class CoSoDuLieu
         $sp->setTenAnh($row['ten_anh']);
         $sp->setTen($row['ten']);
         $sp->setGiaTien($row['gia_tien']);
+        $sp->setMoTa($row['mo_ta']);
         return $sp;
     }
     function NgatKetNoi()
