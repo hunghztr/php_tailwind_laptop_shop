@@ -65,7 +65,7 @@
 
                             <!-- Thông tin sản phẩm -->
                             <div>
-                                <h3 class='text-xl font-semibold text-gray-800'>$ten</h3>
+                                <h3 class='text-xl font-semibold text-gray-800'><a href='../../view/client/detail.php?id=$id_sp'>$ten</a></h3>
                                 <p class='text-gray-600'>Giá: $giaStr ₫</p>
                                 <div class='flex items-center mt-2'>
                                     <button

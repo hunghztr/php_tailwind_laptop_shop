@@ -20,22 +20,20 @@
             $ten_anh = '';
             $mo_ta = '';
             $gia_tien = 0;
-            if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-                if (isset($_GET['id'])) {
-                    $id = $_GET['id'];
-                    $db = new CoSoDuLieu();
-                    $sql = "select * from san_pham where id = $id";
-                    $result = $db->query($sql);
-                    if (mysqli_num_rows($result)) {
-                        $row = mysqli_fetch_assoc($result);
-                        $sp = $db->selectSanPham($row);
-                        $ten = $sp->getTen();
-                        $ten_anh = $sp->getTenAnh();
-                        $mo_ta = $sp->getMoTa();
-                        $gia_tien = $sp->getGiaTien();
-                        $giaStr =
-                            number_format($gia_tien, 0, ',', '.');
-                    }
+            if (isset($_GET['id'])) {
+                $id = $_GET['id'];
+                $db = new CoSoDuLieu();
+                $sql = "select * from san_pham where id = $id";
+                $result = $db->query($sql);
+                if (mysqli_num_rows($result)) {
+                    $row = mysqli_fetch_assoc($result);
+                    $sp = $db->selectSanPham($row);
+                    $ten = $sp->getTen();
+                    $ten_anh = $sp->getTenAnh();
+                    $mo_ta = $sp->getMoTa();
+                    $gia_tien = $sp->getGiaTien();
+                    $giaStr =
+                        number_format($gia_tien, 0, ',', '.');
                 }
             }
             ?>
