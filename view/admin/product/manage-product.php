@@ -11,8 +11,6 @@
 <body>
     <?php
     session_start();
-
-
     if (!isset($_SESSION['vai_tro']) || $_SESSION['vai_tro'] != 'ADMIN') {
         echo "403 Access Denied, bạn không có quyền hạn để truy cập tài nguyên này!";
         exit();
@@ -27,6 +25,34 @@
             <!-- Tiêu đề -->
             <div class="flex justify-between">
                 <h2 class="text-3xl font-bold text-gray-800 mb-6">Quản lý sản phẩm</h2>
+                <?php
+                $limit = 8;
+                $offset = 0;
+                $page = 0;
+                $text = "";
+                if (isset($_GET['next'])) {
+                    $page = $_GET['next'];
+                }
+                if (isset($_GET['pre'])) {
+                    $page = $_GET['pre'];
+                }
+                if ($page < 0) {
+                    $page = 0;
+                }
+                $offset = $limit * $page;
+
+                if (isset($_GET['search'])) {
+                    $text = $_GET['search'];
+                }
+                ?>
+                <form action="./manage-product.php" method="get" class="mt-2 flex">
+                    <button id="filterBtn"
+                        class="mr-2 w-[130px] h-[40px] bg-blue-500 text-white py-2 rounded-xl hover:bg-blue-600 transition-colors duration-300">
+                        Tìm kiếm
+                    </button>
+                    <input type="text" name='search' id="search" placeholder="Tìm theo tên"
+                        class="w-full mb-4 p-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </form>
                 <a href="./create.php" class="font-bold mt-2 text-lg text-blue-500">Tạo Mới</a>
             </div>
             <!-- Bảng dữ liệu -->
@@ -45,7 +71,13 @@
                         require_once '../../../model/CoSoDuLieu.php';
                         require_once '../../../model/SanPham.php';
                         $db = new CoSoDuLieu();
-                        $result = $db->query("select * from san_pham");
+                        $sql = "select * from san_pham";
+                        if ($text != "") {
+                            $sql = $sql . " where ten like '%$text%' limit $limit offset $offset";
+                        } else {
+                            $sql = $sql . " limit $limit offset $offset";
+                        }
+                        $result = $db->query($sql);
                         if (mysqli_num_rows($result) > 0) {
                             while ($row = mysqli_fetch_assoc($result)) {
                                 $sp = $db->selectSanPham($row);
@@ -70,6 +102,28 @@
                         ?>
                     </tbody>
                 </table>
+                <div class="flex justify-center space-x-4 mt-4">
+                    <!-- Nút Trước -->
+                    <a href="?pre=<?php $pre = $page - 1;
+                                    echo "$pre"; ?>"
+                        class="px-4 py-2 bg-gray-300 text-gray-700 rounded-xl hover:bg-gray-400">
+                        <
+                            </a>
+
+                            <!-- Hiển thị trang hiện tại -->
+                            <span class="px-4 py-2 bg-blue-500 text-white rounded-xl">
+                                Trang <?php $cur = $page + 1;
+                                        echo "$cur"; ?>
+                            </span>
+
+                            <!-- Nút Sau -->
+                            <a href="?next=<?php $next = $page + 1;
+                                            echo "$next"; ?>"
+                                class="px-4 py-2 bg-gray-300 text-gray-700 rounded-xl hover:bg-gray-400">
+                                >
+                            </a>
+                </div>
+
             </div>
         </main>
     </section>

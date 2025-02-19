@@ -6,15 +6,11 @@ class DonHang
     private $gia_tien;
     private $tong_san_pham;
     private $id_nguoi_dung;
-
-    public function __construct($id, $ngay_tao, $gia_tien, $tong_san_pham, $id_nguoi_dung)
-    {
-        $this->id = $id;
-        $this->ngay_tao = $ngay_tao;
-        $this->gia_tien = $gia_tien;
-        $this->tong_san_pham = $tong_san_pham;
-        $this->id_nguoi_dung = $id_nguoi_dung;
-    }
+    private $trang_thai;
+    private $dia_chi;
+    private $ghi_chu;
+    private $hinh_thuc;
+    public function __construct() {}
 
     // Getter and Setter for id
     public function getId()
@@ -69,5 +65,48 @@ class DonHang
     public function setIdNguoiDung($id_nguoi_dung)
     {
         $this->id_nguoi_dung = $id_nguoi_dung;
+    }
+    // Getter and Setter for trang_thai
+    public function getTrangThai()
+    {
+        return $this->trang_thai;
+    }
+
+    public function setTrangThai($trang_thai)
+    {
+        $this->trang_thai = $trang_thai;
+    }
+
+    // Getter and Setter for dia_chi
+    public function getDiaChi()
+    {
+        return $this->dia_chi;
+    }
+
+    public function setDiaChi($dia_chi)
+    {
+        $this->dia_chi = $dia_chi;
+    }
+
+    // Getter and Setter for ghi_chu
+    public function getGhiChu()
+    {
+        return $this->ghi_chu;
+    }
+
+    public function setGhiChu($ghi_chu)
+    {
+        $this->ghi_chu = $ghi_chu;
+    }
+
+    // Getter and Setter for hinh_thuc
+    public function getHinhThuc()
+    {
+        return $this->hinh_thuc;
+    }
+
+    public function setHinhThuc($hinh_thuc)
+    {
+        $this->hinh_thuc = $hinh_thuc;
     }
 }

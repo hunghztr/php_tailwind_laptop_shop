@@ -1,6 +1,7 @@
 <?php
 // require_once '../model/SanPham.php';
 // require_once '../model/NguoiDung.php';
+
 class CoSoDuLieu
 {
     public $local = 'localhost';
@@ -40,6 +41,19 @@ class CoSoDuLieu
         $nd->setEmail($row['email']);
         $nd->setDiaChi($row['dia_chi']);
         return $nd;
+    }
+    function selectDonHang($row)
+    {
+        $dh = new DonHang();
+        $dh->setId($row['id']);
+        $dh->setNgayTao($row['ngay_tao']);
+        $dh->setGiaTien($row['gia_tien']);
+        $dh->setTongSanPham($row['tong_san_pham']);
+        $dh->setTrangThai($row['trang_thai']);
+        $dh->setDiaChi($row['dia_chi']);
+        $dh->setGhiChu($row['ghi_chu']);
+        $dh->setHinhThuc($row['hinh_thuc']);
+        return $dh;
     }
     function NgatKetNoi()
     {

@@ -12,8 +12,8 @@
     <section class="flex min-h-screen bg-gray-100">
         <?php include '../../../layout/admin/header.php'; ?>
         <div class="w-[300px] mx-auto mt-10">
-            <h2 class="text-2xl font-bold mt-8 mb-4">Xóa sản phẩm</h2>
-            <form action="../../../controller/admin/manage-product.php" method="post">
+            <h2 class="text-2xl font-bold mt-8 mb-4">Xóa Đơn hàng</h2>
+            <form action="../../../controller/admin/manage-order.php" method="post">
                 <?php
                 require_once '../../../model/CoSoDuLieu.php';
                 $id = 0;
@@ -21,7 +21,7 @@
                     $id = $_GET['id'];
                 }
                 ?>
-                <h3>Bạn có chắc muốn xóa sản phẩm này</h3>
+                <h3>Bạn có chắc muốn xóa đơn hàng này</h3>
                 <button type="submit"
                     class="mt-10 w-full bg-red-600 text-white py-2 rounded-xl hover:bg-red-700 transition duration-300">
                     Xóa
