@@ -79,7 +79,7 @@
                             </div>
                         </form>
                     </div>
-                    <div class="ml-[200px] hidden" id='img'>
+                    <div class="ml-[200px] hidden rounded-xl border border-blue-500 overflow-hidden" id='img'>
                         <img src="../../img/client/logo/qr.jpg" alt="" width="200px">
                     </div>
                 </div>

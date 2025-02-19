@@ -47,9 +47,9 @@ if (isset($_SESSION['id'])) {
         $result4 = $db->query($sql4);
     }
     $db->NgatKetNoi();
-    header("Location: ../../view/client/index.php");
+    header("Location: ../../view/client/product.php");
     exit();
 } else {
-    header("Location: ../../view/client/index.php");
+    header("Location: ../../view/client/product.php");
     exit();
 }
