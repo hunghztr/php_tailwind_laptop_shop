@@ -40,6 +40,6 @@ if (isset($_POST['name'], $_POST['address'], $_POST['price'], $_POST['type'])) {
             $db->query("insert into chi_tiet_don_hang values($id_dh,$id_sp,$so_luong)");
         }
     }
-    header("Location: ./removeAllFromCart.php?id_gh=$id_gh");
+    header("Location: ./removeAllFromCart.php?id_gh=$id_gh&id_dh=$id_dh");
     exit();
 }

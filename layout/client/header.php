@@ -5,7 +5,7 @@ session_start();
 <header class="p-6 mx-auto z-50 fixed top-0 left-0 right-0 shadow-md bg-white">
     <nav class="flex flex-row justify-between items-center relative">
         <div class="text-center text-xl font-semibold logo basis-2/6 lg:basis-3/6 cursor-pointer">
-            Laptop Shop.
+            <a href="./index.php">Laptop Shop.</a>
         </div>
 
         <ul id="top-menu"

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../src/img/title/logo.png" type="image/gif" sizes="16x16">
     <title>Document</title>
+    <link rel="icon" href="../../img/client/logo/logo.png" type="image/gif" sizes="16x16">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
