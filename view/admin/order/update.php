@@ -41,6 +41,14 @@
                     $dia_chi = $dh->getDiaChi();
                     $ghi_chu = $dh->getGhiChu();
                     $hinh_thuc = $dh->getHinhThuc();
+                    $ten_sp = [];
+                    $id_sp = [];
+                    $result_sp =
+                        $db->query("select san_pham.id,san_pham.ten from san_pham , chi_tiet_don_hang where san_pham.id = chi_tiet_don_hang.id_san_pham and chi_tiet_don_hang.id_don_hang = $id");
+                    while ($row_sp = mysqli_fetch_assoc($result_sp)) {
+                        array_push($ten_sp, $row_sp['ten']);
+                        array_push($id_sp, $row_sp['id']);
+                    }
                 }
                 $db->NgatKetNoi();
                 $giaStr = number_format($gia_tien, 0, ',', '.');
@@ -93,7 +101,16 @@
                 <label class='block text-gray-600 text-sm font-semibold mb-1'>Hình Thức Thanh Toán</label>
                <input type='text' value='$hinh_thuc'>
             </div>
-            <input type='text' name='id_dh' value='$id' hidden>"; ?>
+            <input type='text' name='id_dh' value='$id' hidden>
+             <div class='mb-4'>
+                <label class='block text-gray-600 text-sm font-semibold mb-1'>Chi tiết sản phẩm</label>";
+
+                for ($i = 0; $i < count($ten_sp); $i++) {
+                    echo "<a href='../../client/detail?id=" . $id_sp[$i] . "'>$ten_sp[$i]</a><br>";
+                }
+
+                echo "</div>
+        </form>"; ?>
 
                 <button id="filterBtn"
                     class="mt-5 mb-5 w-full h-[40px] bg-blue-500 text-white py-2 rounded-xl hover:bg-blue-600 transition-colors duration-300">
