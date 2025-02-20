@@ -110,13 +110,13 @@
                 }
 
                 echo "</div>
-        </form>"; ?>
-
-                <button id="filterBtn"
-                    class="mt-5 mb-5 w-full h-[40px] bg-blue-500 text-white py-2 rounded-xl hover:bg-blue-600 transition-colors duration-300">
+         <button id='filterBtn'
+                    class='mt-5 mb-5 w-full h-[40px] bg-blue-500 text-white py-2 rounded-xl hover:bg-blue-600 transition-colors duration-300'>
                     Cập nhật
                 </button>
-            </form>
+            </form>"; ?>
+
+
         </div>
     </section>
 
