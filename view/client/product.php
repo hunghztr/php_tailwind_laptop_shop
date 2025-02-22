@@ -13,6 +13,7 @@
     <div class="root">
         <?php include '../../layout/client/header.php'; ?>
         <div class="main flex mt-40 justify-between mx-24">
+            <!-- Bộ lọc sản phẩm -->
             <div class="filter">
                 <form action="../client/product.php" method="get">
                     <div class="p-4 w-96 bg-white rounded-2xl shadow-lg">
@@ -71,8 +72,10 @@
                 </form>
             </div>
             <div class="relative">
+                <!-- bộ lọc sản phẩm -->
                 <div class="product grid grid-cols-3 gap-8 mb-[100px]">
                     <?php
+                    // phân trang
                     $limit = 6;
                     $offset = 0;
                     $page = 0;
@@ -94,12 +97,14 @@
                             isset($_GET['search']) || isset($_GET['cb']) || isset($_GET['price-20']) ||
                             isset($_GET['price-20-30']) || isset($_GET['price-30'])
                         ) {
+                            // tìm kiếm
                             if ($_GET['search'] != '') {
                                 $search = $_GET['search'];
                                 $sql = $sql . " where ten like '%" . $search . "%'";
                             } else {
                                 $size = 0;
                                 if (isset($_GET['cb'])) {
+                                    // lọc theo hãng
                                     $cbs = $_GET['cb'];
                                     $size = count($cbs);
                                     if ($size > 0) {
@@ -116,6 +121,7 @@
                                     isset($_GET['price-20']) || isset($_GET['price-20-30'])
                                     || isset($_GET['price-30'])
                                 ) {
+                                    // lọc theo giá
                                     if (isset($_GET['price-20'])) {
                                         if ($size > 0) {
                                             $sql = $sql . " and gia_tien <= 20000000";
@@ -139,6 +145,7 @@
                             }
                         }
                         if (isset($_GET['factory'])) {
+                            // lọc theo hãng
                             $factory = $_GET['factory'];
                             $sql = $sql . " where danh_muc = '$factory'";
                         }
@@ -182,6 +189,7 @@
                     ?>
 
                 </div>
+                <!-- điều hướng trang -->
                 <div class="mb-5 flex justify-center space-x-4 mt-4 absolute bottom-0 left-0">
                     <!-- Nút Trước -->
                     <a href="?pre=<?php $pre = $page - 1;

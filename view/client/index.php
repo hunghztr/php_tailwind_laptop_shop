@@ -16,9 +16,10 @@
         <div class="content-wrapper max-w-screen-xl text-base mx-auto px-8">
             <?php include '../../layout/client/header.php'; ?>
             <main class="mt-20">
+                <!-- Slide -->
                 <div class=" flex justify-center">
                     <div class="slide h-[400px] w-[1000px] bg-[url('../../img/client/slide/slide1.jpg')]
-                bg-cover bg-bottom bg-no-repeat">
+                    bg-cover bg-bottom bg-no-repeat">
                         <div class="w-full h-full flex justify-center items-center bg-gray-900 bg-opacity-40">
                             <div class="mx-16 text-white text-center">
                                 <div class="uppercase text-sm mb-6 ">
@@ -43,6 +44,7 @@
                     class="rounded-full my-5 px-5 w-max bg-gradient-to-r from-[#f0f0f0] to-white p-2 cursor-pointer shadow-xl hover:shadow-2xl">
                     <h3 class="font-semibold text-gray-500 text-xl uppercase hover:text-gray-800">các nhà sản xuất</h3>
                 </div>
+                <!-- các hãng sản xuất -->
                 <div class="mx-8 my-8 flex justify-center align-center gap-14">
                     <div class="flex justify-center shadow-xl w-60 h-32 bg-white rounded-lg px-4 group relative 
                     overflow-hidden hover:shadow-2xl cursor-pointer">
@@ -79,7 +81,7 @@
                     class="rounded-full my-5 px-5 w-max bg-gradient-to-r from-[#f0f0f0] to-white p-2 cursor-pointer shadow-xl hover:shadow-2xl">
                     <h3 class="font-semibold text-gray-500 text-xl uppercase hover:text-gray-800">sản phẩm phổ biến</h3>
                 </div>
-
+                <!-- sản phẩm phổ biến -->
                 <div class="grid grid-cols-4 gap-3 mb-7">
                     <?php
                     require_once '../../model/SanPham.php';
@@ -113,6 +115,7 @@
                             </form>
                         </div>
                     </div>";
+                            // hiển thị 4 sản phẩm phổ biến
                             $count++;
                             if ($count == 4) {
                                 break;
