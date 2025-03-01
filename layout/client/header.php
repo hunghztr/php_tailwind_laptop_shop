@@ -9,11 +9,11 @@ session_start();
         </div>
 
         <ul id="top-menu"
-            class="basis-3/6 lg:basis-1/6 hidden lg:flex lg:items-center lg:justify-end lg:gap-8 uppercase text-sm text-gray-500 font-medium">
-            <li class="py-1 hover:text-gray-800 relative after:lg:absolute after:lg:bottom-0 after:lg:left-0 after:lg:bg-slate-600 after:lg:h-0.5 after:lg:w-0 hover:after:lg:w-full after:lg:transition-all after:lg:ease-in-out after:lg:duration-300"><a href="./index.php">Home</a></li>
-            <li class="py-1 hover:text-gray-800 relative after:lg:absolute after:lg:bottom-0 after:lg:left-0 after:lg:bg-slate-600 after:lg:h-0.5 after:lg:w-0 hover:after:lg:w-full after:lg:transition-all after:lg:ease-in-out after:lg:duration-300"><a href="./product.php">Products</a></li>
-            <li class="py-1 hover:text-gray-800 relative after:lg:absolute after:lg:bottom-0 after:lg:left-0 after:lg:bg-slate-600 after:lg:h-0.5 after:lg:w-0 hover:after:lg:w-full after:lg:transition-all after:lg:ease-in-out after:lg:duration-300"><a href="./about.php">About</a></li>
-            <li class="py-1 hover:text-gray-800 relative after:lg:absolute after:lg:bottom-0 after:lg:left-0 after:lg:bg-slate-600 after:lg:h-0.5 after:lg:w-0 hover:after:lg:w-full after:lg:transition-all after:lg:ease-in-out after:lg:duration-300"><a href="./contact.php">Contact</a></li>
+            class="basis-3/6 hidden lg:flex lg:items-center lg:justify-end lg:gap-8 uppercase text-sm text-gray-500 font-medium">
+            <li class="py-1 hover:text-gray-800 relative after:lg:absolute after:lg:bottom-0 after:lg:left-0 after:lg:bg-slate-600 after:lg:h-0.5 after:lg:w-0 hover:after:lg:w-full after:lg:transition-all after:lg:ease-in-out after:lg:duration-300"><a href="./index.php">Trang chủ</a></li>
+            <li class="py-1 hover:text-gray-800 relative after:lg:absolute after:lg:bottom-0 after:lg:left-0 after:lg:bg-slate-600 after:lg:h-0.5 after:lg:w-0 hover:after:lg:w-full after:lg:transition-all after:lg:ease-in-out after:lg:duration-300"><a href="./product.php">Sản phẩm</a></li>
+            <li class="py-1 hover:text-gray-800 relative after:lg:absolute after:lg:bottom-0 after:lg:left-0 after:lg:bg-slate-600 after:lg:h-0.5 after:lg:w-0 hover:after:lg:w-full after:lg:transition-all after:lg:ease-in-out after:lg:duration-300"><a href="./about.php">Giới thiệu</a></li>
+            <li class="py-1 hover:text-gray-800 relative after:lg:absolute after:lg:bottom-0 after:lg:left-0 after:lg:bg-slate-600 after:lg:h-0.5 after:lg:w-0 hover:after:lg:w-full after:lg:transition-all after:lg:ease-in-out after:lg:duration-300"><a href="./contact.php">Liên hệ</a></li>
         </ul>
         <ul class="basis-3/6 ml-16 uppercase font-medium w-20 flex justify-end">
             <li class="py-1 hover:text-gray-800 relative after:lg:absolute after:lg:bottom-0 after:lg:left-0 after:lg:bg-slate-600 after:lg:h-0.5 after:lg:w-0 hover:after:lg:w-full after:lg:transition-all after:lg:ease-in-out after:lg:duration-300">
@@ -29,7 +29,7 @@ session_start();
                         d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z">
                     </path>
                 </svg>
-                <span>Cart</span>
+                <span>Giỏ hàng</span>
                 </a>
             </li>
 
@@ -52,7 +52,7 @@ session_start();
              <a href='../../controller/client/logout.php' class='w-full block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100'>Đăng xuất</a>
          </div>";
                     } else {
-                        echo "<span>Login</span>";
+                        echo "<span>Đăng nhập</span>";
                     }
                     ?>
                 </a>

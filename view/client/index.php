@@ -23,7 +23,7 @@
                         <div class="w-full h-full flex justify-center items-center bg-gray-900 bg-opacity-40">
                             <div class="mx-16 text-white text-center">
                                 <div class="uppercase text-sm mb-6 ">
-                                    the best place to buy laptop
+                                    nơi tốt nhất để mua laptop
                                 </div>
                                 <div class="font-medium text-4xl mb-8 uppercase">
                                     laptop shop
@@ -32,7 +32,7 @@
                                     <div
                                         class="uppercase bg-white text-gray-900 w-max 
                                 tracking-wider py-4 px-6 text-xs font-bold cursor-pointer hover:bg-opacity-80 hover:shadow-sm">
-                                        <a href="./product.php">Buy now</a>
+                                        <a href="./product.php">Mua ngay</a>
                                     </div>
                                 </div>
                             </div>
