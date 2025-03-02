@@ -17,7 +17,7 @@
             $db = new CoSoDuLieu();
 
             $row = mysqli_fetch_assoc($db->query("select * from nguoi_dung where email = '$email'"));
-            $db->NgatKetNoi();
+
             if ($row) {
                 header("Location: ../../view/client/register.php?value=Email đã tồn tại");
                 exit();
@@ -27,12 +27,14 @@
                 exit();
             }
             $sql = "insert into nguoi_dung (vai_tro, ho_ten, email, mat_khau, dia_chi) values ('USER','$name', '$email', '$password', '$address')";
-            $result = mysqli_query($connect, $sql);
+            $result = $db->query($sql);
             if ($result) {
                 header("Location: ../../view/client/login.php?value=Đăng kí thành công");
                 exit();
             }
+            $db->NgatKetNoi();
         }
     }
+
     ?>
 
