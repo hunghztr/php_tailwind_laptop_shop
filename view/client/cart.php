@@ -96,20 +96,23 @@
 
 
                     <!-- Tổng tiền và nút Thanh toán -->
-                    <div class="text-right mt-6">
-                        <?php
-                        $tongStr = number_format($tong, 0, ',', '.');
-                        echo "<p class='text-xl font-semibold text-gray-800 mb-4'>Tổng tiền: $tongStr ₫</p>"; ?>
-                        <form action="./pay.php" method="post">
-                            <button
-                                class="bg-blue-600 text-white px-6 py-2 rounded-xl hover:bg-blue-700 transition duration-300">
-                                Thanh toán
-                            </button>
-                            <?php echo "<input type='number' name='sum' value='$tong' hidden>"; ?>
-                        </form>
+                    <div>
+                        <div class="text-right mt-6">
+                            <?php
+                            $tongStr = number_format($tong, 0, ',', '.');
+                            echo "<p class='text-xl font-semibold text-gray-800 mb-4'>Tổng tiền: $tongStr ₫</p>"; ?>
+                            <form action="./pay.php" method="post">
+                                <button
+                                    class="bg-blue-600 text-white px-6 py-2 rounded-xl hover:bg-blue-700 transition duration-300">
+                                    Thanh toán
+                                </button>
+                                <?php echo "<input type='number' name='sum' value='$tong' hidden>"; ?>
+                            </form>
+                        </div>
+
+
                     </div>
                 </div>
-            </div>
         </section>
     </div>
     <?php include '../../layout/client/footer.php'; ?>

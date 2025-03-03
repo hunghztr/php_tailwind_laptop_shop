@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
@@ -64,7 +64,6 @@
                                     <option value="online">Thanh toán online</option>
                                 </select>
                             </div>
-                            <p id='mes'></p>
 
                             <!-- Tổng tiền và nút Thanh toán -->
                             <div class="text-right mt-6">
@@ -79,28 +78,10 @@
                             </div>
                         </form>
                     </div>
-                    <div class="ml-[200px] hidden rounded-xl border border-blue-500 overflow-hidden" id='img'>
-                        <img src="../../img/client/logo/qr.jpg" alt="" width="200px">
-                    </div>
                 </div>
             </div>
         </section>
     </div>
-    <script>
-        const hinh_thuc = document.querySelector('#type')
-        const mes = document.querySelector('#mes')
-        const img = document.querySelector('#img')
-        hinh_thuc.addEventListener('change', (e) => {
-            value = e.target.value;
-            if (value == 'online') {
-                mes.textContent = 'vui lòng chuyển khoản qua qr và đợi admin duyệt đơn(tối đa 10 phút)';
-                img.classList.toggle("hidden")
-            } else {
-                mes.textContent = '';
-                img.classList.toggle('hidden')
-            }
-        })
-    </script>
     <?php include '../../layout/client/footer.php'; ?>
 </body>
 
