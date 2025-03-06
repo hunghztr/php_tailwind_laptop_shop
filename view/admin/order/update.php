@@ -55,20 +55,15 @@
                 echo
                 "
              <div class='mb-4'>
-                <label class='block text-lg font-semibold mb-2'>Trạng thái duyệt:</label>
     <div class='flex items-center space-x-4'>
-        <!-- Nút radio Duyệt -->
-        <label class='flex items-center space-x-2'>
-            <input type='radio' name='pay' value='approved' class='w-5 h-5 text-blue-600' required>
-            <span class='text-gray-700'>Đã thanh toán</span>
-        </label>
+    <label class='text-gray-700'>Trạng thái duyệt:</label>
+    <select name='pay' class='w-40 p-2 border rounded-md text-gray-700'>
+        <option value='approved'>Đã thanh toán</option>
+        <option value='waiting' selected>Chưa thanh toán</option>
+        <option value='out stock' selected>Hết hàng</option>
 
-        <!-- Nút radio Không duyệt -->
-        <label class='flex items-center space-x-2'>
-            <input type='radio' name='pay' checked value='waiting' class='w-5 h-5 text-red-600' required>
-            <span class='text-gray-700'>Chưa thanh toán</span>
-        </label>
-    </div>
+    </select>
+</div>
             </div>
             <div class='mb-4'>
                 <label class='block text-gray-600 text-sm font-semibold mb-1'>Mã Đơn Hàng</label>
