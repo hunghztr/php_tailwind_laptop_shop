@@ -11,6 +11,8 @@
         </a>
     </div>
     <nav class="space-y-4">
+        <a href="../dashboard/dashboard.php" class="block py-3 px-6 text-gray-700 hover:bg-blue-100 hover:text-blue-600">Thống kê doanh
+            thu</a>
         <a href="../user/manage-user.php" class="block py-3 px-6 text-gray-700 hover:bg-blue-100 hover:text-blue-600">Quản lý người
             dùng</a>
         <a href="../product/manage-product.php" class="block py-3 px-6 text-gray-700 hover:bg-blue-100 hover:text-blue-600">Quản lý sản

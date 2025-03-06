@@ -21,7 +21,7 @@ if (isset($_POST['email'], $_POST['password'])) {
         $_SESSION['id'] = $nd->getId();
         $db->NgatKetNoi();
         if ($row['vai_tro'] == 'ADMIN') {
-            header("Location: ../../view/admin/user/manage-user.php");
+            header("Location: ../../view/admin/dashboard.php");
             exit();
         }
         header("Location: ../../view/client/index.php");

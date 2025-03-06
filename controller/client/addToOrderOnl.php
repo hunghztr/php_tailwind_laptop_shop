@@ -2,6 +2,7 @@
 
 if (isset($_GET["vnp_OrderInfo"], $_GET["vnp_Amount"])) {
     $amount = $_GET["vnp_Amount"];
+    $amount = $amount / 100;
     $info = $_GET['vnp_OrderInfo'];
     $arr = explode("|", $info);
     array_push($arr, $amount);
