@@ -40,9 +40,9 @@ elseif (isset(
     $dia_chi = $_POST['address'];
     require_once '../../model/CoSoDuLieu.php';
     $db = new CoSoDuLieu();
-    $result = $db->query("select * from nguoi_dung where email = '$email'");
-    if (mysqli_num_rows($result) > 0) {
-        header("Location: ../../view/admin/user/update.php?value=Email đã tồn tại");
+    $result = $db->query("select * from nguoi_dung where id = '$id'");
+    if (mysqli_num_rows($result) <= 0) {
+        header("Location: ../../view/admin/user/update.php?value=Người dùng không tồn tại");
         exit();
     }
     $result =

@@ -40,7 +40,6 @@
                     $so_luong = $sp->getSoLuong();
                 }
                 $db->NgatKetNoi();
-                $giaStr = number_format($gia, 0, ',', '.');
                 ?>
 
                 <div class='mb-4'>
@@ -62,9 +61,9 @@
                 <div class='mb-4'>
                     <label for='address' class='block text-gray-700 font-medium mb-2'>Giá tiền</label>
                     <?php
-                    echo "<input type='text' id='price' name='price'
+                    echo "<input type='number' id='price' name='price'
                         class='w-full p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500'
-                        placeholder='Nhập địa chỉ của bạn' required value='$giaStr'>";
+                        placeholder='Nhập địa chỉ của bạn' required value='$gia'>";
                     ?>
                 </div>
                 <div class='mb-4'>
