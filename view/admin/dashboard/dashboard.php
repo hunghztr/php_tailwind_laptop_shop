@@ -69,7 +69,9 @@
                         if (mysqli_num_rows($result) > 0) {
                             while ($row = mysqli_fetch_assoc($result)) {
                                 $tien = 0;
-                                $tien = $row['sum(gia_tien)'];
+                                if (isset($row['sum(gia_tien)'])) {
+                                    $tien = $row['sum(gia_tien)'];
+                                }
                                 $tien_str = number_format($tien, 0, '', '.');
                                 $sp = $row['sum(tong_san_pham)'];
                                 $nd = $row['count(id_nguoi_dung)'];
