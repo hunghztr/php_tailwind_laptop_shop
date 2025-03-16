@@ -36,9 +36,9 @@
                 <h2 class="text-3xl font-bold text-gray-800 mb-6">Thống kê doanh thu</h2>
                 <form class="mb-4 mx-auto  p-6 rounded-lg shadow-md flex gap-8" action="" method="get">
                     <input type="date" id="date" name="date-dau"
-                        class="border border-gray-300 rounded-lg  w-full focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                        class="mt-4 px-2 border border-gray-300 rounded-lg  w-full h-[40px] focus:ring-2 focus:ring-blue-500 focus:outline-none">
                     <input type="date" id="date" name="date-cuoi"
-                        class="border border-gray-300 rounded-lg  w-full focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                        class="mt-4 px-2 border border-gray-300 rounded-lg  w-full h-[40px] focus:ring-2 focus:ring-blue-500 focus:outline-none">
 
                     <button type="submit"
                         class="mt-4 mb-4 bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg w-full">
@@ -68,6 +68,7 @@
                         $result = $db->query($sql);
                         if (mysqli_num_rows($result) > 0) {
                             while ($row = mysqli_fetch_assoc($result)) {
+                                $tien = 0;
                                 $tien = $row['sum(gia_tien)'];
                                 $tien_str = number_format($tien, 0, '', '.');
                                 $sp = $row['sum(tong_san_pham)'];
