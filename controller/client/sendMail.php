@@ -37,7 +37,7 @@ try {
     $mail->setFrom($email_admin, 'Admin');
     $mail->addAddress($email_admin, 'Người Nhận'); // Email người nhận
     $mail->Subject = 'Thong bao duyet don hang';
-    $mail->Body = "Đơn hàng mã $id_dh cần bạn duyệt, hãy truy cập với quyền admin để xử lí";
+    $mail->Body = "Đơn hàng mã $id_dh cần bạn duyệt, hãy truy cập với quyền admin để xử lí http://localhost/php/laptop_shop/view/admin/order/update?id=$id_dh";
 
     // Gửi email
     $mail->send();

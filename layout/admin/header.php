@@ -1,13 +1,9 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <aside class="w-1/4 bg-gray-200 shadow-xl">
     <div class="relative flex">
-        <h2 class="text-2xl font-bold text-center py-6">Admin Trang chủ</h2>
-        <a href="../../../controller/client/logout.php" class="mt-7 ml-7">
-            Đăng xuất<svg data-slot="icon" class="inline-block w-5 h-5" fill="none" stroke-width="1" stroke="currentColor"
-                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9"></path>
-            </svg>
+        <h2 class="text-2xl font-bold text-center py-6 px-5">Trang chủ</h2>
+        <a href="../../../controller/client/logout.php" class="mt-7 ml-20 text-red-400 hover:text-blue-600">
+            Đăng xuất
         </a>
     </div>
     <nav class="space-y-4">

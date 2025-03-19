@@ -60,8 +60,8 @@
                             <div class="mb-4">
                                 <label class="block mb-2 font-semibold text-gray-700">Hình thức</label>
                                 <select name="type" id='type' class="border p-2 w-full rounded-lg">
-                                    <option value="offline">Thanh toán offine</option>
-                                    <option value="online">Thanh toán online</option>
+                                    <option value="offline">Thanh toán khi nhận hàng</option>
+                                    <option value="online">Thanh toán vnpay</option>
                                 </select>
                             </div>
 
