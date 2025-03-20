@@ -1,0 +1,54 @@
+create database laptop_shop;
+use laptop_shop;
+create table nguoi_dung(
+	id int auto_increment primary key ,
+    vai_tro char(50),
+    ho_ten nvarchar(50),
+    email nvarchar(50),
+    mat_khau char(10),
+    dia_chi nvarchar(50)
+);
+create table san_pham(
+	id int auto_increment primary key ,
+    ten nvarchar(50),
+    danh_muc nvarchar(70),
+    ten_anh nvarchar(50),
+    mo_ta text,
+    gia_tien int,
+    so_luong int
+);
+create table gio_hang(
+	id int auto_increment primary key,
+    ten nvarchar(30),
+    tong_san_pham,
+    id_nguoi_dung int,
+    foreign key(id_nguoi_dung)
+    references nguoi_dung(id)
+);
+create table don_hang(
+	id int auto_increment primary key,
+    ngay_tao date,
+    gia_tien char(10),
+    tong_san_pham int,
+    id_nguoi_dung int,
+hinh_thuc char(10),
+trang_thai char(10),
+dia_chi nvarchar(200),
+ghi_chu nvarchar(200),
+    foreign key(id_nguoi_dung)
+    references nguoi_dung(id)
+);
+create table chi_tiet_don_hang(
+	id_don_hang int,
+	so_luong int,
+    id_san_pham int,
+    foreign key (id_don_hang) references don_hang(id),
+    foreign key (id_san_pham) references san_pham(id)
+);
+create table chi_tiet_gio_hang(
+	id_gio_hang int,
+	so_luong int,
+    id_san_pham int,
+    foreign key (id_gio_hang) references gio_hang(id),
+    foreign key (id_san_pham) references san_pham(id)
+);
